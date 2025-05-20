@@ -43,8 +43,9 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Movies!) {
-        <tr>
+        @foreach (var item in Model.Movies!)
+        {
+            <tr>
                 <td>
                     @Html.DisplayFor(modelItem => item.Title)
                 </td>
@@ -60,12 +61,12 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Rating)
                 </td>
-            <td>
+                <td>
                     <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                     <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                     <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
